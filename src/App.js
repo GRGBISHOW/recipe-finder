@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import image_recognition from "./image_recognition";
+import Webcam from "react-webcam";
 
 function App() {
+  const videoConstraints = {
+    width: 1280,
+    height: 720,
+    facingMode: "user",
+  };
+  const [capturedBase64, setCapturedBase64] = useState(null);
+
+  const getScreenShotRenderProps = (arg) => {
+    return (
+      <button
+        onClick={() => {
+          const imageSrc = arg.getScreenshot();
+          setCapturedBase64(imageSrc);
+        }}
+      >
+        Capture photo
+      </button>
+    );
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Webcam
+        audio={false}
+        height={500}
+        screenshotFormat="image/jpeg"
+        width={500}
+        videoConstraints={videoConstraints}
+        mirrored={true}
+        children={getScreenShotRenderProps}
+      />
+      {capturedBase64 && <img src={capturedBase64} />}
+      <button
+        onClick={() => {
+          image_recognition(capturedBase64).then((res) => {
+              console.log({ res });
+          });
+        }}
+      >
+        Submit
+      </button>
     </div>
   );
 }
