@@ -1,8 +1,11 @@
 const PAT = "481b1b657b1e48d597cc0574a5627bfd";
 const USER_ID = "h37j5inclvcb";
 const APP_ID = "com_recipe_finder_uow";
-const MODEL_ID = "general-image-recognition";
-const MODEL_VERSION_ID = "aa9ca48295b37401f8af92ad1af0d91d";
+// const MODEL_ID = "general-image-recognition";
+// const MODEL_VERSION_ID = "aa9ca48295b37401f8af92ad1af0d91d";
+
+const MODEL_ID = 'food-item-recognition';
+const MODEL_VERSION_ID = '1d5fd481e0cf4826aa72ec3ff049e044'; 
 
 const getRequestBody = (base64String) => {
   return JSON.stringify({

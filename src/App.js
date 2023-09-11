@@ -12,6 +12,7 @@ function App() {
   };
   const [capturedBase64, setCapturedBase64] = useState(null);
 
+  const [result, setResult] = useState(null);
   const getScreenShotRenderProps = (arg) => {
     return (
       <button
@@ -39,12 +40,13 @@ function App() {
       <button
         onClick={() => {
           image_recognition(capturedBase64).then((res) => {
-              console.log({ res });
+            setResult(res.outputs[0].data.concepts[0].name);
           });
         }}
       >
         Submit
       </button>
+      {result && <div>{result}</div>}
     </div>
   );
 }
