@@ -1,10 +1,12 @@
 import { useState } from "react";
+
 import {
   Box,
   Button,
   TextField,
   useMediaQuery,
   Typography,
+  Grid
 } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
@@ -182,13 +184,15 @@ const Form = () => {
               }}>
               <Box
                 sx={{
-                  paddingLeft: '472px',
+                  // paddingLeft: '472px',
                   display: 'flex',
                   alignItems: 'center',
                   width: '100%',
                 }}
               >
-              <TextField
+                <Grid container spacing={2}>
+                  <Grid item xs={6}>
+                  <TextField
                   label="First Name"
                   onBlur={handleBlur}
                   onChange={handleChange}
@@ -198,8 +202,10 @@ const Form = () => {
                     Boolean(touched.firstName) && Boolean(errors.firstName)
                   }
                   helperText={touched.firstName && errors.firstName}
-                  sx={{ width: '205px', marginLeft: '80px', marginBottom:'20px'}}
+                  sx={{ width:'100%', marginBottom:'20px'}}
                 />
+                  </Grid>
+                  <Grid item xs={6}>
                 <TextField
                   label="Last Name"
                   onBlur={handleBlur}
@@ -208,8 +214,11 @@ const Form = () => {
                   name="lastName"
                   error={Boolean(touched.lastName) && Boolean(errors.lastName)}
                   helperText={touched.lastName && errors.lastName}
-                  sx={{ width: '205px', marginLeft: '18px', marginBottom:'20px'}}
+                  sx={{  width:'100%',marginBottom:'20px'}}
                 />
+                </Grid>
+                </Grid>
+              
               </Box>
               <Box
                 width='100%'
@@ -222,10 +231,10 @@ const Form = () => {
                   border={`1px solid black`}
                   borderRadius="5px"
                   p="1rem"
-                  width='395px'
+                  width='100%'
                   height= '20px'
                   position='relative'
-                  left='80px'
+                  // left='80px'
                   sx={{marginBottom:'20px'}}
                 >
                   <Dropzone
@@ -269,7 +278,7 @@ const Form = () => {
               name="email"
               error={Boolean(touched.email) && Boolean(errors.email)}
               helperText={touched.email && errors.email}
-              sx={{ gridColumn: "span 4" , width: '430px', left: '80px', marginBottom:'20px' }}
+              sx={{ width:"100%", marginBottom:'20px' }}
             />
             <TextField
               label="Password"
@@ -280,7 +289,7 @@ const Form = () => {
               name="password"
               error={Boolean(touched.password) && Boolean(errors.password)}
               helperText={touched.password && errors.password}
-              sx={{ gridColumn: "span 4", width: '430px', left: '80px' }}
+              sx={{ width:"100%" }}
             />
           </Box>
 
@@ -297,7 +306,7 @@ const Form = () => {
               type="submit"
               sx={{
                 m: "2rem 0",
-                width: '430px', left: '80px' , 
+                width: '100%',
                 p: "1rem",
                 backgroundColor: '#F2994A',
                 "&:hover": { backgroundColor: '#105B27' },
@@ -319,7 +328,6 @@ const Form = () => {
                 resetForm();
               }}
               sx={{
-                marginLeft: '80px',
                 color: '#20B64D',
                 "&:hover": {
                   cursor: "pointer",

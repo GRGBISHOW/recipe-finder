@@ -11,60 +11,58 @@ html{
 }
 
 .iniBox{
-    width: 750px;
-    height: 95vh;
-    max-height: 950px;
-    flex-shrink: 0;
-    display: flex;
+    width: 80%;
     border-radius: 0px 50px 50px 0px;
     background: #A6E2B8;
-    position: relative; 
-    justify-content: center;
+    position: relative;
+   
+}
+.imageOne {
+    position:relative;
+     bottom: 50px;
+      left: 30px;
+      z-index: 0;
+}
+
+.imageFlex {
+    width: 70%;
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 50%;
+
+}
+
+.botomImage {
+    position: relative;
 }
 
 .upperLogoBox{
-    padding-top: 70px;
+    padding-top: 10%;
+    padding-left: 20px;
     display: flex;
-    min-width: 100%;
-    min-height: 720px;
-    height:100%;
-    border-radius: 30px;
-    background: #A6E2B8;
-    position: absolute;
+    width: 70%;
     flex-direction: column;
     img{
         z-index: 1;
     }
     .upperLogo{ 
-        width: 230px;
-        margin: 0 0 0 200px;
-        height: 100px
+        width: 80%;
+       
     }
-    p{
-        margin-top: 20px;
-        margin-left: 200px;
-    }
+   
 }
 
-.mainSlogan p{
-    width: 466px;
+.mainSlogan {
     color: #105B27;
-    font-family: Quicksand;
-    font-size: 52px;
-    position: absolute;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 72.44px; /* 114.499% */
-    letter-spacing: -0.374px;
     z-index: 5;
 }
 
 .loginBox{
-    margin: 5%;
     width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20%;
 }
 
 .welcomeBox{
@@ -79,9 +77,7 @@ html{
         font-family: Quicksand;
         font-size: 38px;
         font-style: normal;
-        padding-left: 80px;
         font-weight: 700;
-        line-height: 72.44px; /* 171.749% */
         letter-spacing: -0.374px;
     }
 
@@ -91,11 +87,9 @@ html{
         flex-shrink: 0;
         color: var(--Dark-Blue, #263238);
         font-family: Quicksand;
-        padding-left: 80px;
         font-size: 22px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32.44px; /* 257.624% */
         letter-spacing: -0.374px;
     }
 }
