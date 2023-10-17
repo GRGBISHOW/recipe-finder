@@ -1,6 +1,7 @@
 import { Box, useMediaQuery, IconButton } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import LowerBar from "scenes/lowerBar";
+import ActualLowerBar from "scenes/actualLowerBar";
 import {Typography, InputBase} from "@mui/material";
 import { red } from "@mui/material/colors"
 import Image from "components/ImageWrapper";
@@ -516,6 +517,7 @@ const ProfilePage = () => {
             }                
             </Box>
        </Box>    
+      <ActualLowerBar />
     </>
   );
 };
