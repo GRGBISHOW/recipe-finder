@@ -1,0 +1,75 @@
+/* Camera.css */
+
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120vh;
+    border-radius: 30px;
+    background-color: #E9F8EE;
+  }
+  
+  .image-preview {
+    text-align: center;
+    height: 450px;
+    position:'relative';
+    border-radius: 30px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .webcam-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+
+  }
+  
+  .capture-button,
+  .submit-button {
+    background-color: #105B27;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    margin-bottom:50px;
+    position:'relative';
+    bottom: '100px';
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .submit-button-second {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    color: #105B27;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    position:'relative';
+    margin-top: 30px;
+    margin-bottom:50px;
+    bottom: '100px';
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .capture-button:hover p,
+  .submit-button-second:hover p,
+  .submit-button:hover p{
+    font-weight: 700;
+  }
+  
+  

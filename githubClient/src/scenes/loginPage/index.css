@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Quicksand:wght@300;400;500;700&display=swap');
+
+
+html{
+    display: flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.iniBox{
+    width: 1100px;
+    height: 98vh;
+    max-height: 950px;
+    display: flex;
+    border-radius: 0px 50px 50px 0px;
+    background: #A6E2B8;
+    position: relative; 
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.upperLogoBox{
+    padding-top: 70px;
+    display: flex;
+    min-width: 100%;
+    min-height: 720px;
+    height:100%;
+    align-self: flex-start;
+    justify-self: flex-start;
+    border-radius: 30px;
+    background: #A6E2B8;
+    position: absolute;
+    flex-direction: column;
+    img{
+        z-index: 1;
+    }
+    .upperLogo{ 
+        width: 230px;
+        margin: 0 0 0 200px;
+        height: 100px
+    }
+    p{
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+}
+
+.mainSlogan p{
+    width: 466px;
+    color: #105B27;
+    font-family: Quicksand;
+    font-size: 52px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72.44px; /* 114.499% */
+    letter-spacing: -0.374px;
+    z-index: 5;
+}
+
+.loginBox{
+    margin: 5%;
+    width: 100%;
+    display:flex;
+    max-width: 1080px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeBox{
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    height: '200px';
+    
+    
+    .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: #263238;
+        font-family: Quicksand;
+        font-size: 38px;
+        font-style: normal;
+        padding-left: 80px;
+        font-weight: 700;
+        line-height: 72.44px; /* 171.749% */
+        letter-spacing: -0.374px;
+    }
+
+    .second{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 93px;
+        flex-shrink: 0;
+        color: var(--Dark-Blue, #263238);
+        font-family: Quicksand;
+        padding-left: 80px;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32.44px; /* 257.624% */
+        letter-spacing: -0.374px;
+    }
+}
